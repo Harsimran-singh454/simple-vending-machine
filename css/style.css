@@ -1,0 +1,228 @@
+*{
+    font-family: 'Pacifico', cursive;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    text-align: center;
+    font-size: 40px;
+}
+
+h2{
+    text-align: center;
+}
+
+
+main{
+    display:flex;
+    text-align: center;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+}
+
+
+/* ------------- Styles for machine ----------------- */
+.setup{
+    position: relative;
+    width: 500px;
+    margin: 0px auto;
+}
+
+
+
+
+
+
+.setup button{
+    position: absolute;
+    background-color: rgba(255, 0, 0, 0.708);
+    border: none;
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+
+/* ----------------drink buttons--------------- */
+.btn1{
+    top:29.5%;
+    left: 42%;
+}
+
+.btn2{
+    top:29.5%;
+    left: 55%;
+}
+
+.btn3{
+    top:29.5%;
+    left: 69%;
+}
+
+.unpressed{
+    top:28%;
+    box-shadow: 0px 7px 0px 0px black;
+}
+
+
+
+/* ----------------- Pouring drinks --------------- */
+
+.drink1{
+    position: absolute;
+    display: flex;
+    top: 49%;
+    left: 45.8%;
+    background-color: rgb(28, 6, 6);
+    width: 5px;
+    height: 0px;
+    transition: 1s;
+}
+
+.drink2{
+    position: absolute;
+    display: flex;
+    top: 49%;
+    left: 59.3%;
+    background-color: rgb(200, 239, 71);
+    width: 5px;
+    height: 0px;
+    transition: 1s;
+}
+
+.drink3{
+    position: absolute;
+    display: flex;
+    top: 49%;
+    left: 73%;
+    background-color: rgb(236 255 207);
+    width: 5px;
+    height: 0px;
+    transition: 1s;
+}
+
+
+
+
+/* -------------------- glass ---------------- */
+
+#glass{
+    position: absolute;
+    width: 55px;
+    top: 51%;
+}
+
+/* -------------------positions for glass --------------- */
+
+.glass-0{
+    left: 95%;
+    transition: 1s;
+    transform: scale(2);
+}
+
+.glass-1{
+    right: 0px;
+    left: 68%;
+    transform: scale(1);
+    transition: 1s;
+}
+
+.glass-2{
+    right: 0px;
+    left: 54.5%;
+    transition: 1s;
+}
+
+.glass-3{
+    right: 0px;
+    left: 40.5%;
+    transition: 1s;
+}
+
+
+/* ----------------- glass movement buttons------------- */
+
+#left-btn{
+    top:80%;
+    left: 45%;
+    cursor: pointer;
+}
+
+
+#right-btn{
+    top:80%;
+    left: 65%;
+    cursor: pointer;
+
+}
+
+
+#left-btn:active, #right-btn:active{
+    transform: scale(1.1);
+    transition: 0.1s;
+    box-shadow: inset 0px 0px 6px 0px black;
+}
+
+
+
+/* ------------------ Nutrition info -------------- */
+
+.nutri{
+    position: absolute;
+    background-color: rgb(255, 255, 138);
+    padding: 5%;
+    border-radius: 20px;
+    border: 3px solid black;
+    margin-left: 10%;
+    left: -7%;
+    width: 20%;
+    /* transform: translateX(-50%);     */
+}
+
+.nutri h3{
+    text-align: left;
+    margin-left: 0px;
+}
+
+.nutri div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 5%;
+}
+
+.nutri p{
+    text-align: right;
+}
+
+
+
+@media screen and (max-width: 786px) {
+    .nutri {
+        position: relative;
+        width: 100%;
+        margin: 5px;
+        left: 0px;
+    }
+    #machine{
+        width: 600px;
+        margin: 0px auto;
+    }
+  }
+
+@media screen and (min-width: 786px) {
+    #machine{
+        width: 600px;
+        margin: 0px auto;
+    }
+  }
+
+
+
