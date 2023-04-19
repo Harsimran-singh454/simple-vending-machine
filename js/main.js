@@ -4,8 +4,11 @@ window.onload=()=>{
     var btn3 = document.querySelector(".btn3");
 
     var drink1 = document.querySelector(".drink1");
+    var overflow1 = document.querySelector(".overflow1");
     var drink2 = document.querySelector(".drink2");
+    var overflow2 = document.querySelector(".overflow2");
     var drink3 = document.querySelector(".drink3");
+    var overflow3 = document.querySelector(".overflow3");
 
 
     // Pouring first drink 
@@ -14,8 +17,13 @@ window.onload=()=>{
         btn1.classList.toggle("unpressed");
         if(!btn1.classList.contains("unpressed")){
             drink1.style.height = "83px";
+            setTimeout(()=>{
+            overflow1.classList.add("overflow");
+            },5000);
         } else {
             drink1.style.height = "0px";
+            overflow1.style.animationName = "none";
+            overflow1.classList.remove("overflow");
         }
     })
     
@@ -26,8 +34,13 @@ window.onload=()=>{
         btn2.classList.toggle("unpressed");
         if(!btn2.classList.contains("unpressed")){
             drink2.style.height = "83px";
+            setTimeout(()=>{
+                overflow2.classList.add("overflow");
+                },5000);
         } else {
             drink2.style.height = "0px";
+            overflow2.classList.remove("overflow");
+
         }
     })
     
@@ -38,8 +51,13 @@ window.onload=()=>{
         btn3.classList.toggle("unpressed");
         if(!btn3.classList.contains("unpressed")){
             drink3.style.height = "83px";
+            setTimeout(()=>{
+                overflow3.classList.add("overflow");
+                },5000);
         } else {
             drink3.style.height = "0px";
+            overflow3.classList.remove("overflow");
+
         }
     })
 
@@ -82,13 +100,13 @@ window.onload=()=>{
     var fat = document.getElementById("fat");
     var protein = document.getElementById("protein");
     var energy = document.getElementById("energy");
-
-
+    
     // movement buttons 
     var left = document.getElementById("left-btn");
     var right = document.getElementById("right-btn");
     var glass = document.getElementById("glass");
 
+    var nutri = document.querySelector(".nutri");
 
     // left button interaction
     left.onclick=()=>{
@@ -108,6 +126,10 @@ window.onload=()=>{
             fat.innerText = drink_info1.fat;
             protein.innerText = drink_info1.protein;
             energy.innerText = drink_info1.energy;
+
+            nutri.style.background = "rgb(236 255 207)";
+            nutri.style.color = "black";
+      
         } else if(glass.className == "glass-2"){
             name.innerText = drink_info2.name;
             calories.innerText = drink_info2.calories;
@@ -115,6 +137,11 @@ window.onload=()=>{
             fat.innerText = drink_info2.fat;
             protein.innerText = drink_info2.protein;
             energy.innerText = drink_info2.energy;
+
+            nutri.style.background = "rgb(200, 239, 71)";
+            nutri.style.color = "black";
+
+
         } else if(glass.className == "glass-3"){
             name.innerText = drink_info3.name;
             calories.innerText = drink_info3.calories;
@@ -122,6 +149,11 @@ window.onload=()=>{
             fat.innerText = drink_info3.fat;
             protein.innerText = drink_info3.protein;
             energy.innerText = drink_info3.energy;
+
+            nutri.style.background = "rgb(28, 6, 6)";
+            nutri.style.color = "white";
+
+
         } else{
             name.innerText = "----";
             calories.innerText = "----";
@@ -130,13 +162,17 @@ window.onload=()=>{
             protein.innerText = "----";
             energy.innerText = "----";
         }
+
+        overflow1.classList.remove("overflow");
+        overflow3.classList.remove("overflow");
+        overflow2.classList.remove("overflow");
     }
 
 
 
     // right button interaction
 
-        right.onclick=()=>{
+    right.onclick=()=>{
         var cur_place = Number(glass.className.slice(6))-1;
         
         if(glass.className == "glass-0"){
@@ -155,6 +191,10 @@ window.onload=()=>{
             fat.innerText = drink_info1.fat;
             protein.innerText = drink_info1.protein;
             energy.innerText = drink_info1.energy;
+
+            nutri.style.background = "rgb(236 255 207)";
+            nutri.style.color = "black";
+
         } else if(glass.className == "glass-2"){
             name.innerText = drink_info2.name;
             calories.innerText = drink_info2.calories;
@@ -162,6 +202,10 @@ window.onload=()=>{
             fat.innerText = drink_info2.fat;
             protein.innerText = drink_info2.protein;
             energy.innerText = drink_info2.energy;
+
+            nutri.style.background = "rgb(200, 239, 71)";
+            nutri.style.color = "black";
+
         } else if(glass.className == "glass-3"){
             name.innerText = drink_info3.name;
             calories.innerText = drink_info3.calories;
@@ -169,6 +213,9 @@ window.onload=()=>{
             fat.innerText = drink_info3.fat;
             protein.innerText = drink_info3.protein;
             energy.innerText = drink_info3.energy;
+
+            nutri.style.background = "rgb(28, 6, 6)";
+            nutri.style.color = "white";
         } else{
             name.innerText = "----";
             calories.innerText = "----";
@@ -177,5 +224,12 @@ window.onload=()=>{
             protein.innerText = "----";
             energy.innerText = "----";
         }
+
+        overflow1.classList.remove("overflow");
+        overflow3.classList.remove("overflow");
+        overflow2.classList.remove("overflow");
+
     }
+
+    
 }

@@ -85,6 +85,8 @@ main{
     transition: 1s;
 }
 
+
+
 .drink2{
     position: absolute;
     display: flex;
@@ -95,7 +97,6 @@ main{
     height: 0px;
     transition: 1s;
 }
-
 .drink3{
     position: absolute;
     display: flex;
@@ -106,8 +107,42 @@ main{
     height: 0px;
     transition: 1s;
 }
-
-
+.overflow1{
+    position: absolute;
+    width: 20px;
+    height: 0px;
+    background-color: rgb(28, 6, 6);
+    top: 52.8%;
+    left: 45.8%;
+}
+.overflow2{
+    position: absolute;
+    width: 20px;
+    height: 0px;
+    top: 52.8%;
+    z-index: 5;
+    left: 59.8%;
+    background-color: rgb(200, 239, 71);
+    background-color: rgb(251, 255, 236);
+}
+.overflow3{
+    position: absolute;
+    width: 20px;
+    height: 0px;
+    top: 52.8%;
+    z-index: 5;
+    left: 73%;
+    background-color: rgb(236 255 207);
+}
+.overflow{
+    position: absolute;
+    display: flex;
+    z-index: 5;
+    width: 20px;
+    height: 70px;
+    transition: 1s linear;
+    animation-play-state: running;
+}
 
 
 /* -------------------- glass ---------------- */
